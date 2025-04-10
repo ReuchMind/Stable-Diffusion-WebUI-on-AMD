@@ -16,7 +16,9 @@ Basic knowledge of command line
 
 🛠️ 1. Install Python 3.10.6 (not higher)
 
-Download from https://www.python.org/downloads/release/python-3106/
+Download from:
+
+https://www.python.org/downloads/release/python-3106/
 
 During installation:
 
@@ -24,12 +26,12 @@ During installation:
 
 ✅ Choose custom install > make sure pip is included
 
-📥 2. Clone AMD-Compatible WebUI
+📅 2. Clone AMD-Compatible WebUI
 
 git clone https://github.com/lshqqytiger/stable-diffusion-webui-amdgpu.git
 cd stable-diffusion-webui-amdgpu
 
-🧩 3. Modify webui-user.bat
+🧹 3. Modify webui-user.bat
 
 Open webui-user.bat and set the following:
 
@@ -41,16 +43,13 @@ call webui.bat
 
 💡 What these flags do:
 
---skip-torch-cuda-test — Avoids checking for CUDA (we're on AMD, CUDA is NVIDIA)
-
---no-half — Prevents half-precision issues
-
---use-directml — Enables DirectML backend (AMD-compatible)
+--skip-torch-cuda-test     Avoids checking for CUDA (we're on AMD, CUDA is NVIDIA)
+--no-half                  Prevents half-precision issues
+--use-directml             Enables DirectML backend (AMD-compatible)
 
 ▶️ 4. Run the WebUI
 
-Double-click or run webui-user.bat.
-If successful, you will see:
+Double-click or run webui-user.bat. If successful, you will see:
 
 Running on local URL: http://127.0.0.1:7860
 
@@ -73,7 +72,7 @@ pip install torch==1.12
 
 ❌ RuntimeError: Input type (float) and bias type (struct c10::Half) should be the same
 
-Fix: You already fixed this with --no-half
+Fix: Already fixed with --no-half
 
 ❌ Failed to install ZLUDA: 'NoneType' object is not subscriptable
 
@@ -85,7 +84,7 @@ Use Task Manager > Performance tab > GPU
 
 Under "Compute 0" and "VRAM usage", you should see activity while generating
 
-If not, something went wrong — double check the flags and that torch-directml is installed
+If not, double check the flags and that torch-directml is installed
 
 🙌 Final Tips
 
