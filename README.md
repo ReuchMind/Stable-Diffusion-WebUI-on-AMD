@@ -14,24 +14,33 @@ Git
 
 Basic knowledge of command line
 
-🛠️ 1. Install Python 3.10.6 (not higher)
+🛠️ 1. Install Python 3.10.6 (not higher) + GIT
 
 Download from:
 
+https://gitforwindows.org/
 https://www.python.org/downloads/release/python-3106/
 
-During installation:
+During installation Python:
 
 ✅ Check "Add Python to PATH"
 
 ✅ Choose custom install > make sure pip is included
 
-📅 2. Clone AMD-Compatible WebUI
+🗃️ 2. Set Up Your Folder Structure
+
+Open File Explorer and create the following folder:
+
+C:\stable-diffusion\webui
+
+Inside the webui folder, right-click the address bar and select "Open in Terminal" or type cmd and press Enter.
+
+📅 3. Clone AMD-Compatible WebUI
 
 git clone https://github.com/lshqqytiger/stable-diffusion-webui-amdgpu.git
 cd stable-diffusion-webui-amdgpu
 
-🧹 3. Modify webui-user.bat
+🧹 4. Modify webui-user.bat
 
 Open webui-user.bat and set the following:
 
@@ -47,7 +56,7 @@ call webui.bat
 --no-half                  Prevents half-precision issues
 --use-directml             Enables DirectML backend (AMD-compatible)
 
-▶️ 4. Run the WebUI
+▶️ 5. Run the WebUI
 
 Double-click or run webui-user.bat. If successful, you will see:
 
@@ -55,7 +64,7 @@ Running on local URL: http://127.0.0.1:7860
 
 Open it in your browser. 🎉
 
-🧱 5. Common Errors + Fixes
+🧱 6. Common Errors + Fixes
 
 ❌ AttributeError: module 'torch' has no attribute 'dml'
 
