@@ -36,7 +36,10 @@ Inside the webui folder, right-click the address bar and select "Open in Termina
 
 📅 3. Clone AMD-Compatible WebUI
 ```bash
-git clone https://github.com/lshqqytiger/stable-diffusion-webui-amdgpu.git cd stable-diffusion-webui-amdgpu
+git clone https://github.com/lshqqytiger/stable-diffusion-webui-amdgpu.git
+```
+```bash
+cd stable-diffusion-webui-amdgpu
 ```
 🧹 4. Modify webui-user.bat
 
